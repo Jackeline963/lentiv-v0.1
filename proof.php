@@ -1,84 +1,68 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>    
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+     <script>        
+      $(document).ready(function(){
+         $('.modal').modal();
+      });
+          
+      </script>
+	  <style>
+		  .modal{max-height:90% !important;}	  
+	  </style>
+    </head>
+ <body>  
+  <!-- Modal Button -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Open Regiister Modal</a>
 
-<html>
-	<script>
-		let array = [260820212,
-3108202153,
-0609202158,
-0709202173,
-0709202194,
-07092021100,
-0809202125,
-0809202162,
-08092021106,
-1309202171,
-1309202184,
-1309202191,
-13092021158,
-13092021203,
-14092021103,
-14092021249,
-14092021260,
-14092021269,
-1709202145,
-1709202148,
-1709202151,
-1709202155,
-1709202158,
-1709202165,
-1709202168,
-1709202171,
-1709202178,
-1709202183,
-1709202188,
-1709202192,
-1709202196,
-1709202197,
-17092021101,
-17092021105,
-17092021110,
-17092021114,
-17092021115,
-17092021116,
-17092021117,
-17092021119,
-17092021120,
-17092021121,
-17092021122,
-17092021124,
-17092021125,
-17092021127,
-17092021128,
-17092021129,
-17092021130,
-17092021131,
-17092021133,
-17092021134,
-17092021135,
-17092021136,
-17092021138,
-17092021139,
-17092021141,
-17092021142,
-17092021144,
-17092021146,
-17092021147,
-17092021149,
-17092021150,
-17092021151,
-17092021153,
-17092021154,
-17092021155,
-17092021156,
-17092021157,
-17092021160,
-17092021161,
-17092021163,
-17092021164,
-17092021165,
-17092021166];
-for(let i=0; i<=array.length-1; i++){
-	document.write("'"+array[i]+"',<br>")
-}
-
-	</script>
-</html>
+  <!-- Modal Body -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Register</h4>
+	 <div class="col s6">
+		<form class="">
+      <div class="row">
+		 <div class="input-field col s6">
+          <input id="Name" type="text" class="validate">
+          <label for="Email">Name</label>
+        </div>
+		 <div class="input-field col s6">
+          <input id="Email" type="email" class="validate">
+          <label for="Email">Email</label>
+        </div>
+		<div class="input-field col s12">
+          <input id="Phone" type="text" class="validate">
+          <label for="Phone">Phone</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="Password" type="password" class="validate">
+          <label for="Password">Password</label>
+        </div>
+		  <div class="input-field col s12">
+          <input id="CnfPassword" type="password" class="validate">
+          <label for="CnfPassword">Confirm Password</label>
+        </div>
+		 <div class="input-field col s12">
+          <button type="submit" class="waves-effect waves-light btn">Register</button>
+        </div>        
+      </div>	
+      </form>
+     </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div> 
+ </body>
+    
+  </html>
