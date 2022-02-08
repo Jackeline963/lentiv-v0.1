@@ -27,11 +27,11 @@
         <!-- Modal body -->
         <div class="modal-body">
           <div class="form-row" autocomplete="on">
-            <div class="form-group col-md-8">
+            <div class="form-group col-md-9">
               <label for="ex3">Nombre</label>
               <input type="text"  class="form-control" name="" placeholder="Nombre completo" required="" id="nombre">
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-3">
               <label for="ex3">Teléfono</label>
               <input type="text"  class="form-control" name="" placeholder="Teléfono" required="" id="telefono">
             </div>
@@ -77,7 +77,10 @@
             </div>
           </div>
         </div>
-        <input type="hidden" id='id_usuario' value="<?php echo $_SESSION['id_usuario']?>" >
+        <?php date_default_timezone_set('America/El_Salvador'); $hoy = date("d-m-Y H:i:s");?>
+        <input type="text" id="estado" value='1'>
+        <input type="text" id="id_usuario" value="<?php echo $_SESSION['id_usuario']?>" >
+        <input type="text" id="fecha" value="<?php echo $hoy;?>">
         <input type="text" class="form-control clear_input" id="codigo_user" readonly="" style="background: white;border: 1px solid white;color:black;text-align:right;">
         <!-- Modal footer -->
         <div class="modal-footer" style="margin-top:3px;">

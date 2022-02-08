@@ -1,13 +1,13 @@
 <?php
 require_once("../config/conexion.php");
-require_once("../modelos/Usuarios.php");
+require_once("../modelos/Usuario.php");
 
-$usuario = new Usuarios();
+$usuarios = new User();
 
 switch ($_GET["op"]){//inicio switch
 
 	case 'get_codigo_usuario':   //generando codigo usuario
-	$datos= $usuario->get_codigo_usuario();
+	$datos= $usuarios->get_codigo_usuario();
 
 	if(is_array($datos)==true and count($datos)>0){
 		foreach($datos as $row){                  
@@ -24,9 +24,9 @@ switch ($_GET["op"]){//inicio switch
 	break;
 
 	case 'guardar_usuario': //Registrando paciente
-	$datos=$usuario->valida_existencia_usuarios($_POST["telefono"],$_POST["codigo"]);
+	$datos=$usuarios->valida_existencia_usuarios($_POST["telefono"],$_POST["codigo"]);
 	if(is_array($datos)==true and count($datos)==0){
-		$usuario->guardar_usuario($_POST["nombre"],$_POST["telefono"],$_POST["correo"],$_POST["dui"],$_POST["direccion"],$_POST["usuario"],$_POST["pass"],$_POST["codigo"],$_POST["nick"],$_POST["nit"],$_POST["isss"],$_POST["afp"],$_POST["cuenta"],$_POST["fecha_ingreso"],$_POST["estado"]);
+		$usuarios->guardar_usuario($_POST["nombre"],$_POST["telefono"],$_POST["correo"],$_POST["dui"],$_POST["direccion"],$_POST["usuario"],$_POST["pass"],$_POST["codigo"],$_POST["nick"],$_POST["nit"],$_POST["isss"],$_POST["afp"],$_POST["cuenta"],$_POST["fecha_ingreso"],$_POST["estado"]);
 		$messages[]="ok";
 	}else{
 		$errors[]="error";
@@ -55,7 +55,7 @@ switch ($_GET["op"]){//inicio switch
 	break;
 
 	case 'listar_usuarios_lenti':  //Listar usuarios de lenti
-	$datos=$usuario->get_usuarios();
+	$datos=$usuarios->get_usuarios();
 
 	$data= Array();
 

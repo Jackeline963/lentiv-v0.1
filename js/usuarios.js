@@ -7,7 +7,7 @@ function get_codigo_usuario(){
   $.ajax({
     url:"../ajax/usuarios.php?op=get_codigo_usuario",
     method:"POST",
-    data:{},
+    //data:{},
     cache:false,
     dataType:"json",
       success:function(data){
@@ -69,12 +69,12 @@ function guardar_usuario(){
 
     $("#datatable_usuarios").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
-      dom: 'frti',
-      //"buttons": [ "excel"],
+      dom: 'Bfrtip',
+      "buttons": [ "excel"],
       "searching": true,
       "ajax":
       {
-        url: '../ajax/usuarios.php?op=listar_usuarios_lenti',
+        url: "../ajax/usuarios.php?op=listar_usuarios_lenti",
         type : "post",
         dataType : "json",        
         error: function(e){

@@ -1,7 +1,7 @@
 <?php 
 require_once("../config/conexion.php");
 if(isset($_SESSION["usuario"])){
-  $cat_admin = $_SESSION["categoria"];
+
   ?>
   <!DOCTYPE html>
   <html>
@@ -70,9 +70,7 @@ if(isset($_SESSION["usuario"])){
     ?>
     <?php date_default_timezone_set('America/El_Salvador'); $hoy = date("d-m-Y H:i:s");?>
     <input type="hidden" id="fecha" value="<?php echo $hoy;?>">
-    <script type="text/javascript" src="../js/usuarios.js"></script>
-    <script type="text/javascript" src='../js/bootbox.min.js'></script>
-    <script type="text/javascript" src='../js/cleave.js'></script>
+    <script type="text/javascript" src='../js/usuarios.js'></script>
   </footer>
 </div>
 
